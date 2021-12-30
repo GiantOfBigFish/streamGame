@@ -10,7 +10,9 @@ import SwiftUI
 struct Register: View {
     @State var mail:String = ""
     @State var password:String = ""
+    @State var passwordAgain:String = ""
     @State private var isSecured: Bool = true
+    @State private var isSecuredAgain: Bool = true
     
     var body: some View {
         ScrollView {
@@ -38,7 +40,6 @@ struct Register: View {
             }
             
             VStack(alignment: .leading ) {
-                
                 Text("Correo Electrónico")
                     .foregroundColor(Color("dark-cian"))
                 ZStack (alignment: .leading) {
@@ -54,44 +55,76 @@ struct Register: View {
                     .frame(height: 1)
                     .background(Color("dark-cian"))
                     .padding(.bottom)
-                Text("Constraseña")
-                    .foregroundColor(Color("dark-cian"))
-                ZStack (alignment: .leading) {
-                    
-                    HStack {
+                //password
+                Group {
+                    Text("Constraseña")
+                        .foregroundColor(Color("dark-cian"))
+                    ZStack (alignment: .leading) {
                         if (password.isEmpty) {
                             Text(verbatim: "Contraseña")
                                 .font(.caption)
                                 .foregroundColor(Color("light-gray"))
                         }
-                        
-                        if isSecured {
-                            SecureField("", text: $password)
-                                .foregroundColor(.white)
-                        } else {
-                            TextField("", text: $password)
-                                .foregroundColor(.white)
-                        }
-                        Button(action: {
-                            isSecured.toggle()
-                        }) {
-                            Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                                .accentColor(Color("dark-cian"))
+                        HStack {
+                            if isSecured {
+                                SecureField("", text: $password)
+                                    .foregroundColor(.white)
+                            } else {
+                                TextField("", text: $password)
+                                    .foregroundColor(.white)
+                            }
+                            Button(action: {
+                                isSecured.toggle()
+                            }) {
+                                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                    .accentColor(Color("dark-cian"))
+                            }
                         }
                     }
-                    
+                    Divider()
+                        .frame(height: 1)
+                        .background(Color("dark-cian"))
+                        .padding(.bottom)
                 }
-                Divider()
-                    .frame(height: 1)
-                    .background(Color("dark-cian"))
-                    .padding(.bottom)
-                
-                
-                
-                
+                //confirm password
+                Group {
+                    Text("Confirmar Contraseña")
+                        .foregroundColor(Color("dark-cian"))
+                    ZStack (alignment: .leading) {
+                        if (passwordAgain.isEmpty) {
+                            Text(verbatim: "Confirmar contraseña")
+                                .font(.caption)
+                                .foregroundColor(Color("light-gray"))
+                                .frame(minWidth: 0,
+                                       maxWidth: .infinity,
+                                       minHeight: 0,
+                                       maxHeight: .infinity,
+                                       alignment: .leading)
+                        }
+                        HStack {
+                            if isSecuredAgain {
+                                SecureField("", text: $passwordAgain)
+                                    .foregroundColor(.white)
+                            } else {
+                                TextField("", text: $passwordAgain)
+                                    .foregroundColor(.white)
+                            }
+                            Button(action: {
+                                isSecuredAgain.toggle()
+                            }) {
+                                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                    .accentColor(Color("dark-cian"))
+                            }
+                        }
+                    }
+                    Divider()
+                        .frame(height: 1)
+                        .background(Color("dark-cian"))
+                        .padding(.bottom)
+                }
                 
                 Button (action: createAccount, label: {
-                    Text ("INICIA SESIÓN")
+                    Text ("Registrate")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -105,16 +138,16 @@ struct Register: View {
                                     .shadow(color: .white, radius: 6))
                     
                     
-                }).padding(.top,30)
+                }).padding(.top,20)
                 
-                Text("Inicia sesión con redes sociales")
+                Text("Registrarse con redes sociales")
                     .foregroundColor(.white)
                     .frame(minWidth: 0,
                            maxWidth: .infinity,
                            minHeight: 0,
                            maxHeight: .infinity,
                            alignment: .center)
-                    .padding(.top,75)
+                   
                 
                 
                 HStack {
