@@ -46,6 +46,7 @@ struct Home: View {
                     Image(systemName: "heart")
                     Text("Favorites")
                 }
+            //test
         }
     }
 }
