@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            
-            Color("marine").ignoresSafeArea()
-            VStack {
-                Image("logoSG")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 250).padding(.bottom, 40)
-                Login()
-            }
-
+        NavigationView {
+            ZStack {
+                Color("marine").ignoresSafeArea()
+                VStack {
+                    Image("logoSG")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250).padding(.bottom, 40)
+                    Login()
+                }
+            }.navigationBarHidden(true)
         }
     }
 }

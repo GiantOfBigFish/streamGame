@@ -11,6 +11,7 @@ struct Sesion: View {
     @State var mail:String = ""
     @State var password:String = ""
     @State private var isSecured: Bool = true
+    @State private var isHomeActive: Bool = false
     var body: some View {
         ScrollView {
             VStack(alignment: .leading ) {
@@ -69,7 +70,7 @@ struct Sesion: View {
                         .frame(width: 300, alignment: .trailing)
                 }.padding(.bottom)
                 
-                Button (action: loggin, label: {
+                Button (action: {isHomeActive = true}, label: {
                     Text ("INICIA SESIÓN")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -124,12 +125,14 @@ struct Sesion: View {
             
             }.padding(.horizontal, 77)
         }.background(Color("marine"))
+        NavigationLink (
+            destination: Home(),
+            isActive: $isHomeActive,
+            label: {EmptyView()}
+        )
     }
 }
 
-private func loggin() {
-    print ("loggin xdd")
-}
 private func logginFb() {
     print("login fb")
 }
