@@ -14,6 +14,7 @@
 		142D62542778FEEB0052EA06 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D62532778FEEB0052EA06 /* Register.swift */; };
 		142D6256277902CF0052EA06 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D6255277902CF0052EA06 /* Sesion.swift */; };
 		142D6258277903340052EA06 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D6257277903340052EA06 /* Login.swift */; };
+		146585AF278156D500DA31F1 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146585AE278156D500DA31F1 /* Dashboard.swift */; };
 		148CACEE277ECBE4006523E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CACED277ECBE4006523E1 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		142D62532778FEEB0052EA06 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		142D6255277902CF0052EA06 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
 		142D6257277903340052EA06 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		146585AE278156D500DA31F1 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		148CACED277ECBE4006523E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +81,7 @@
 		142D62522778FEBE0052EA06 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				148CACEF277ECD13006523E1 /* New Group */,
+				148CACEF277ECD13006523E1 /* Modules */,
 				142D6259277903AF0052EA06 /* Auth */,
 				148CACED277ECBE4006523E1 /* Home.swift */,
 			);
@@ -96,11 +98,12 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		148CACEF277ECD13006523E1 /* New Group */ = {
+		148CACEF277ECD13006523E1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				146585AE278156D500DA31F1 /* Dashboard.swift */,
 			);
-			path = "New Group";
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +181,7 @@
 				142D62542778FEEB0052EA06 /* Register.swift in Sources */,
 				142D62472778FB460052EA06 /* ContentView.swift in Sources */,
 				148CACEE277ECBE4006523E1 /* Home.swift in Sources */,
+				146585AF278156D500DA31F1 /* Dashboard.swift in Sources */,
 				142D62452778FB460052EA06 /* StreamGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
