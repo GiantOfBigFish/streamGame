@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct Home: View {
+    @State var tabSelected: Int = 2
+    init () {
+//Solution #1
+//        let appearance = UITabBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.backgroundColor = UIColor( Color("tabcolor") )
+//        UITabBar.appearance().standardAppearance = appearance
+//        if#available(iOS 15.0, *) {
+//            UITabBar.appearance().scrollEdgeAppearance = appearance
+//        }
+//
+        //Solution #2
+        UITabBar.appearance().backgroundColor = UIColor( Color("tabcolor") )
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().isTranslucent = true
+    }
+    
     var body: some View {
-        TabView {
+        
+        TabView (selection: $tabSelected) {
             Text("Profile")
                 .font(.system(
                     size: 30,
@@ -18,7 +36,7 @@ struct Home: View {
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
-                }
+                }.tag(0)
             Text("Games")
                 .font(.system(
                     size: 30,
@@ -27,16 +45,13 @@ struct Home: View {
                 .tabItem {
                     Image(systemName: "gamecontroller")
                     Text("Games")
-                }
-            Text("Home")
-                .font(.system(
-                        size: 30,
-                        weight: .bold,
-                        design: .rounded))
-                .tabItem {
+                }.tag(1)
+            
+            Dashboard().tabItem {
                     Image(systemName: "house")
                     Text("home")
-                }
+                }.tag(2)
+            
             Text("Favoritos")
                 .font(.system(
                     size: 30,
@@ -45,10 +60,10 @@ struct Home: View {
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Favorites")
-                }
-                //test
-        }
+                }.tag(3)
+        }.accentColor(.white)
     }
+   
 }
 
 struct Home_Previews: PreviewProvider {
