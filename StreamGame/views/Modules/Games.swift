@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct Games: View {
+    @ObservedObject var allVideoGames = ViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hellow from games view")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .onAppear(
+                perform: {
+                    let firstGame:GameElement = allVideoGames.gamesData[0]
+                    print("first element of json \(firstGame)")
+                    print("title of first videogame of json \(firstGame.title)")
+                }
+            )
     }
 }
 

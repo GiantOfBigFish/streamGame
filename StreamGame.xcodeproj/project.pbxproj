@@ -17,6 +17,9 @@
 		146585AF278156D500DA31F1 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146585AE278156D500DA31F1 /* Dashboard.swift */; };
 		148CACEE277ECBE4006523E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CACED277ECBE4006523E1 /* Home.swift */; };
 		14F5FE332782642200C7C92E /* SubHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5FE322782642200C7C92E /* SubHome.swift */; };
+		14F5FE352782994C00C7C92E /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5FE342782994C00C7C92E /* Games.swift */; };
+		14F5FE3927829C2300C7C92E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5FE3827829C2300C7C92E /* Model.swift */; };
+		14F5FE3B27829C3700C7C92E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5FE3A27829C3700C7C92E /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		146585AE278156D500DA31F1 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		148CACED277ECBE4006523E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		14F5FE322782642200C7C92E /* SubHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHome.swift; sourceTree = "<group>"; };
+		14F5FE342782994C00C7C92E /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		14F5FE3827829C2300C7C92E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		14F5FE3A27829C3700C7C92E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 		142D62432778FB460052EA06 /* StreamGame */ = {
 			isa = PBXGroup;
 			children = (
+				14F5FE3727829BE000C7C92E /* viewModel */,
+				14F5FE3627829BD800C7C92E /* model */,
 				142D62522778FEBE0052EA06 /* views */,
 				142D62442778FB460052EA06 /* StreamGameApp.swift */,
 				142D62462778FB460052EA06 /* ContentView.swift */,
@@ -105,8 +113,25 @@
 			children = (
 				146585AE278156D500DA31F1 /* Dashboard.swift */,
 				14F5FE322782642200C7C92E /* SubHome.swift */,
+				14F5FE342782994C00C7C92E /* Games.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		14F5FE3627829BD800C7C92E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				14F5FE3827829C2300C7C92E /* Model.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		14F5FE3727829BE000C7C92E /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14F5FE3A27829C3700C7C92E /* ViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +207,10 @@
 				142D6256277902CF0052EA06 /* Sesion.swift in Sources */,
 				142D6258277903340052EA06 /* Login.swift in Sources */,
 				142D62542778FEEB0052EA06 /* Register.swift in Sources */,
+				14F5FE3B27829C3700C7C92E /* ViewModel.swift in Sources */,
+				14F5FE352782994C00C7C92E /* Games.swift in Sources */,
 				14F5FE332782642200C7C92E /* SubHome.swift in Sources */,
+				14F5FE3927829C2300C7C92E /* Model.swift in Sources */,
 				142D62472778FB460052EA06 /* ContentView.swift in Sources */,
 				148CACEE277ECBE4006523E1 /* Home.swift in Sources */,
 				146585AF278156D500DA31F1 /* Dashboard.swift in Sources */,
