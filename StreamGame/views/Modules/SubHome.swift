@@ -52,6 +52,127 @@ struct SubHome: View {
                 }.frame(minWidth: 0, maxWidth: .infinity,alignment: .center)
                 .padding(.vertical)
                 
+                Text("CATEGORÍA SUGERIDAS PARA TI")
+                    .font(.title3)
+                    .foregroundColor(.white).bold()
+                    .frame(minWidth: 0, maxWidth: .infinity,alignment: .leading)
+                    .padding(.top)
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack {
+                        Button (action: {}, label: {
+                            ZStack {
+                                RoundedRectangle (cornerRadius: 8)
+                                    .fill(Color("blue-gray"))
+                                    .frame(width: 160, height: 90)
+                                Image ("Vector-shot")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 42, height: 42)
+                            }
+                        })
+                        Button (action: {}, label: {
+                            ZStack {
+                                RoundedRectangle (cornerRadius: 8)
+                                    .fill(Color("blue-gray"))
+                                    .frame(width: 160, height: 90)
+                                Image ("rpg-icon")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 42, height: 42)
+                            }
+                        })
+                        Button (action: {}, label: {
+                            ZStack {
+                                RoundedRectangle (cornerRadius: 8)
+                                    .fill(Color("blue-gray"))
+                                    .frame(width: 160, height: 90)
+                                Image ("open-world-icon")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 42, height: 42)
+                            }
+                        })
+                    }
+                }
+                Text("RECOMENDADOS PARA TI")
+                    .font(.title3)
+                    .foregroundColor(.white).bold()
+                    .frame(minWidth: 0, maxWidth: .infinity,alignment: .leading)
+                    .padding(.top)
+                ScrollView( .horizontal, showsIndicators: false){
+                    HStack {
+                        Button(action: {
+                            urlDefault = urlVideos[1]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("Abzu")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                        Button(action: {
+                            urlDefault = urlVideos[2]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("CrashBandicoot")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                        Button(action: {
+                            urlDefault = urlVideos[3]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("DEATHSTRANDING")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                    }
+                }
+                Text("VIDEOS QUE PODRÍAN GUSTARTE")
+                    .font(.title3)
+                    .foregroundColor(.white).bold()
+                    .frame(minWidth: 0, maxWidth: .infinity,alignment: .leading)
+                    .padding(.top)
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack {
+                        Button(action: {
+                            urlDefault = urlVideos[4]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("Cuphead")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                        Button(action: {
+                            urlDefault = urlVideos[5]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("Hades")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                        Button(action: {
+                            urlDefault = urlVideos[6]
+                            print("URL: \(urlDefault)")
+                            isPlayerActive = true
+                        }, label: {
+                            Image("gta")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 240, height: 135)
+                        })
+                        
+                    }
+                }
             }
         }
       
