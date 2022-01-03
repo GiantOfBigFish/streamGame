@@ -48,7 +48,7 @@ struct Dashboard: View {
                 }
             }.padding(.horizontal, 18)
         }.navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(true)
     }
     private func search() {
         print ("El usuario esta buscando \(toSearch)" )
