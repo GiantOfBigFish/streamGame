@@ -42,7 +42,9 @@ struct Dashboard: View {
                     .background(Color("blue-gray"))
                     .clipShape(Capsule())
                     
-                    
+                    ScrollView(showsIndicators: false){
+                        SubHome()
+                    }
                 }
             }.padding(.horizontal, 18)
         }.navigationBarHidden(true)
