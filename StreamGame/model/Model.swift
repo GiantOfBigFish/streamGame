@@ -12,17 +12,23 @@ struct GameElements: Codable {
 }
 
 struct GameElement: Codable {
-    var title, studio, contentRaiting, publicationYear: String
-    var gameDescription: String
-    var platforms, tags: [String]
-    var videosUrls: VideosUrls
-    var galleryImages: [String]
+    var title:String
+    var studio:String
+    var contentRaiting:String
+    var publicationYear:String
+    var description:String
+    var platforms:[String]
+    var tags:[String]
+    var videosUrls:videoUrl
+    var galleryImages:[String]
    
 }
 
-    // MARK: - VideosUrls
-struct VideosUrls: Codable {
-    let mobile, tablet: String
+struct videoUrl:Codable {
+    
+    var mobile:String
+    var tablet:String
+    
 }
 
 
