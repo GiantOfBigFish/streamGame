@@ -11,7 +11,7 @@ struct GameElements: Codable {
     var games: [GameElement]
 }
 
-struct GameElement: Codable {
+struct GameElement: Codable, Hashable {
     var title:String
     var studio:String
     var contentRaiting:String
@@ -24,7 +24,7 @@ struct GameElement: Codable {
    
 }
 
-struct videoUrl:Codable {
+struct videoUrl:Codable, Hashable {
     
     var mobile:String
     var tablet:String
