@@ -59,7 +59,9 @@ struct SubHome: View {
                     .padding(.top)
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack {
-                        Button (action: {}, label: {
+                        Button (action: {
+                            print("vector shot")
+                        }, label: {
                             ZStack {
                                 RoundedRectangle (cornerRadius: 8)
                                     .fill(Color("blue-gray"))

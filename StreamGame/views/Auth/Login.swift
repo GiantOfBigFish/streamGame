@@ -16,6 +16,7 @@ struct Login: View {
                 Spacer()
                 Button("Inicio sesión") {
                     isSession = true;
+                    print("login")
                 }
                 .foregroundColor(isSession ? .white : .gray)
                 Spacer()

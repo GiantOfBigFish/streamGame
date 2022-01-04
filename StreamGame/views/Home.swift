@@ -11,18 +11,18 @@ struct Home: View {
     @State var tabSelected: Int = 2
     init () {
 //Solution #1
-//        let appearance = UITabBarAppearance()
-//        appearance.configureWithOpaqueBackground()
-//        appearance.backgroundColor = UIColor( Color("tabcolor") )
-//        UITabBar.appearance().standardAppearance = appearance
-//        if#available(iOS 15.0, *) {
-//            UITabBar.appearance().scrollEdgeAppearance = appearance
-//        }
-//
-        //Solution #2
-        UITabBar.appearance().backgroundColor = UIColor( Color("tabcolor") )
-        UITabBar.appearance().barTintColor = .white
-        UITabBar.appearance().isTranslucent = true
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor( Color("tabcolor") )
+        UITabBar.appearance().standardAppearance = appearance
+        if#available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
+
+//Solution #2
+//        UITabBar.appearance().backgroundColor = UIColor( Color("tabcolor") )
+//        UITabBar.appearance().barTintColor = .white
+//        UITabBar.appearance().isTranslucent = true
     }
     
     var body: some View {
@@ -37,12 +37,7 @@ struct Home: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }.tag(0)
-            Text("Games")
-                .font(.system(
-                    size: 30,
-                    weight: .bold,
-                    design: .rounded))
-                .tabItem {
+            Games().tabItem {
                     Image(systemName: "gamecontroller")
                     Text("Games")
                 }.tag(1)
