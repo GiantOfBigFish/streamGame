@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct Games: View {
     @ObservedObject var allVideoGames = ViewModel()
@@ -33,7 +34,15 @@ struct Games: View {
                                 currentGame = game
                                 print  ("pressed: Current game \(currentGame?.title)")
                             } , label: {
-                                Text(game.title)
+                                VStack {
+                                    KFImage( URL( string: game.galleryImages[0])!)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .clipShape(RoundedRectangle.init(cornerRadius: 4))
+                                        .padding(.bottom, 12)
+                                    Text(game.title).font(.title3)
+                                }
+                                
                             })
                         }
                     }
