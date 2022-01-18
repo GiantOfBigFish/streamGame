@@ -182,7 +182,7 @@ struct SubHome: View {
             destination: VideoPlayer (player: AVPlayer(url: URL(string:urlDefault)!))
                 .frame(width: 400, height: 400),
             isActive: $isPlayerActive,
-            label: {EmptyView()})
+            label: {EmptyView()} )
     }
 }
 

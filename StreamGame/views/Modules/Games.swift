@@ -11,12 +11,24 @@ import Kingfisher
 struct Games: View {
     @ObservedObject var allVideoGames = ViewModel()
     @State var gameViewIsActive: Bool = false
-    @State var currentGame: GameElement? = nil
+    @State var currentGame: GameElement
     let gridForm = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
 
+    init() {
+        self.currentGame =
+            GameElement(title: "",
+                        studio: "",
+                        contentRaiting: "",
+                        publicationYear: "",
+                        description: "",
+                        platforms: [""],
+                        tags: [""],
+                        videosUrls: videoUrl(mobile: "", tablet: ""),
+                        galleryImages: [""])
+    }
     var body: some View {
         ZStack {
             Color("marine").ignoresSafeArea()
@@ -32,7 +44,8 @@ struct Games: View {
                             game in
                             Button ( action: {
                                 currentGame = game
-                                print  ("pressed: Current game \(currentGame?.title)")
+                                print  ("passing current game-> \(currentGame.title)")
+                                gameViewIsActive = true
                             } , label: {
                                 VStack {
                                     KFImage( URL( string: game.galleryImages[0])!)
@@ -42,21 +55,20 @@ struct Games: View {
                                         .padding(.bottom, 12)
                                     Text(game.title).font(.title3)
                                 }
-                                
                             })
                         }
                     }
                 }
             }.padding(.horizontal,6)
+           
+            NavigationLink (
+                destination: GameContent(currentGame: currentGame) ,
+                    //                destination:  Text(currentGame?.title ?? "empty"),
+                isActive: $gameViewIsActive,
+                label: { EmptyView() })
+                   
         }.navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-//            .onAppear(
-//                perform: {
-//                    let firstGame:GameElement = allVideoGames.gamesData[0]
-//                    print("first element of json \(firstGame)")
-//                    print("title of first videogame of json \(firstGame.title)")
-//                }
-//            )
+        .navigationBarBackButtonHidden(true)
     }
 }
 

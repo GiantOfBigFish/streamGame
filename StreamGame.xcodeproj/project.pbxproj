@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		140DCC182785DCBD0090049F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 140DCC172785DCBD0090049F /* Kingfisher */; };
+		140DCC1A2785E4D20090049F /* GameContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140DCC192785E4D20090049F /* GameContent.swift */; };
 		142D62452778FB460052EA06 /* StreamGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D62442778FB460052EA06 /* StreamGameApp.swift */; };
 		142D62472778FB460052EA06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D62462778FB460052EA06 /* ContentView.swift */; };
 		142D62492778FB480052EA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142D62482778FB480052EA06 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140DCC192785E4D20090049F /* GameContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContent.swift; sourceTree = "<group>"; };
 		142D62412778FB460052EA06 /* StreamGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		142D62442778FB460052EA06 /* StreamGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamGameApp.swift; sourceTree = "<group>"; };
 		142D62462778FB460052EA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				146585AE278156D500DA31F1 /* Dashboard.swift */,
 				14F5FE322782642200C7C92E /* SubHome.swift */,
 				14F5FE342782994C00C7C92E /* Games.swift */,
+				140DCC192785E4D20090049F /* GameContent.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				142D62542778FEEB0052EA06 /* Register.swift in Sources */,
 				14F5FE3B27829C3700C7C92E /* ViewModel.swift in Sources */,
 				14F5FE352782994C00C7C92E /* Games.swift in Sources */,
+				140DCC1A2785E4D20090049F /* GameContent.swift in Sources */,
 				14F5FE332782642200C7C92E /* SubHome.swift in Sources */,
 				14F5FE3927829C2300C7C92E /* Model.swift in Sources */,
 				142D62472778FB460052EA06 /* ContentView.swift in Sources */,
