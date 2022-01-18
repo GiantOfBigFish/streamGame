@@ -19,7 +19,7 @@ struct GameElement: Codable, Hashable {
     var description:String
     var platforms:[String]
     var tags:[String]
-    var videosUrls:videoUrl?
+    var videosUrls:videoUrl
     var galleryImages:[String]
    
 }
