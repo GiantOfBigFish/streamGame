@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import Kingfisher
 
 struct GameContent: View {
     var currentGame: GameElement
@@ -17,6 +18,7 @@ struct GameContent: View {
                 Video(url: currentGame.videosUrls.mobile).frame(height: 300)
                 ScrollView {
                     InfoVideo(game: currentGame).padding(.bottom)
+                    GamGallery (imgs: currentGame.galleryImages)
                 }.frame(maxWidth: .infinity)
             }
         }
@@ -77,6 +79,27 @@ struct InfoVideo: View {
     }
 }
 
+struct GamGallery : View {
+    var imgs: [String]
+    var gridForm = [
+        GridItem(.flexible())
+    ]
+    var body: some View{
+        VStack(alignment: .leading) {
+            
+            ScrollView(.horizontal){
+                LazyHGrid(rows: gridForm, spacing: 8 ){
+                    ForEach( imgs, id:\.self ) {
+                        img in
+                        KFImage(URL(string: img))
+                            .resizable()
+                            .aspectRatio( contentMode: .fill)
+                    }
+                }
+            }.frame(height: 180)
+        }.frame(maxWidth:.infinity, alignment: .leading)
+    }
+}
 struct GameContent_Previews: PreviewProvider {
     
     static var previews: some View {
